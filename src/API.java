@@ -98,18 +98,21 @@ public class API {
 		try {
 			obj = new URL(url);
 		} catch (MalformedURLException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 		HttpURLConnection con = null;
 		try {
 			con = (HttpURLConnection) obj.openConnection();
 		} catch (IOException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 
 		try {
 			con.setRequestMethod("GET");
 		} catch (ProtocolException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 
@@ -144,6 +147,7 @@ public class API {
 				System.out.println(response.toString());
 			return response.toString();
 		} catch (IOException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 		return null;
@@ -164,12 +168,14 @@ public class API {
 		try {
 			obj = new URL(url);
 		} catch (MalformedURLException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 		HttpsURLConnection con = null;
 		try {
 			con = (HttpsURLConnection) obj.openConnection();
 		} catch (IOException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 
@@ -179,6 +185,7 @@ public class API {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 		} catch (ProtocolException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 
@@ -221,6 +228,7 @@ public class API {
 			return response.toString();
 
 		} catch (IOException e) {
+			if (debugMode)
 			printError(e.toString());
 		}
 		return null;
