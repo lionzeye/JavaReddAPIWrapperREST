@@ -27,7 +27,7 @@ public class API {
 	private String key_GET, key_POST;
 	private String baseURL = "https://api.reddapi.com/v1/json/";
 	private final String USER_AGENT = "Mozilla/5.0";
-	private boolean debugMode = true;
+	private boolean debugMode = false;
 
 	// Constructor //
 	/**
