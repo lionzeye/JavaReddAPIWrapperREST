@@ -238,12 +238,12 @@ public class API {
 	/**
 	 * @param userName
 	 *            Username attached to a user.
-	 * @return The current credit-balance of the given username as a double.
+	 * @return The current credit-balance of the given username as a String.
 	 */
-	public double getUserBalance(String userName) {
-		return Double.parseDouble(requestGET("GetUserBalance", userName));
+	public String getUserBalance(String userName) {
+		return requestGET("GetUserBalance", userName);
 	}
-
+	
 	/**
 	 * @param userName
 	 *            Username attached to a user.
