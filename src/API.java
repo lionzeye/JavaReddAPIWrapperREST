@@ -247,6 +247,16 @@ public class API {
 	/**
 	 * @param userName
 	 *            Username attached to a user.
+	 * @return The current confirmed and unconfirmed credit-balance of the 
+	 * given username as a String.
+	 */
+	public String getUserBalanceDetail(String userName) {
+		return requestGET("GetUserBalanceDetail", userName);
+	}
+	
+	/**
+	 * @param userName
+	 *            Username attached to a user.
 	 * @return A JSON-object packaged in a String, containing UserInfo.
 	 */
 	public String getUserInfo(String userName) {
